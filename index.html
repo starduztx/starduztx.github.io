@@ -3,70 +3,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Starduztx - Portfolio</title>
+  <title>Kittithat - Portfolio</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <img src="profile.jpg" alt="My Profile" class="profile-pic"/>
-    <h1>Starduztx</h1>
-    <p>Computer Science Student | Web Developer | AI Enthusiast</p>
+  <header data-aos="fade-down">
+    <img src="images/Profile.jpg" alt="My Profile" class="profile-pic"/>
+    <h1>Kittithat</h1>
+    <p>Computer Science Student | Software Developer</p>
   </header>
 
-  <!-- Navigation -->
-  <nav>
+  <nav data-aos="fade-down" data-aos-delay="200">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
+    <a href="#Projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <div class="container">
-    <!-- About Section -->
-    <section id="about" class="fade">
+    <section id="about" data-aos="fade-up">
       <h2>About Me</h2>
       <p>
-        Hi! I'm a Computer Science student passionate about web development and AI.
-        I enjoy building creative applications and learning new technologies.
+        Computer Science student with strong knowledge and skills in web and software development, covering both frontend and backend, as well as database design and management. 
+        Experienced in academic and real-world projects, such as building data monitoring systems and developing practical applications. Proficient in using development tools, version control systems, and collaborative coding practices. Highly motivated to explore emerging technologies, eager to continuously improve technical expertise, and capable of working effectively in a team environment. Dedicated to growing into a professional software developer.
       </p>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="fade">
+    <section id="skills" data-aos="fade-up">
       <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill-card"><i class="fab fa-html5"></i> HTML</div>
-        <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS</div>
-        <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
-        <div class="skill-card"><i class="fab fa-react"></i> React</div>
-        <div class="skill-card"><i class="fab fa-python"></i> Python</div>
-        <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="frontend">Frontend</button>
+        <button class="tab-btn" data-tab="backend">Backend</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+      </div>
+
+      <div class="tab-content active" id="frontend">
+        <div class="skills-grid">
+          <div class="skill-card"><i class="fab fa-html5"></i> HTML</div>
+          <div class="skill-card"><i class="fab fa-css3-alt"></i> CSS</div>
+          <div class="skill-card"><i class="fab fa-js"></i> JavaScript</div>
+          <div class="skill-card"><i class="fab fa-react"></i> React</div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="backend">
+        <div class="skills-grid">
+          <div class="skill-card"><i class="fab fa-python"></i> Python</div>
+          <div class="skill-card"><i class="fas fa-database"></i> SQL</div>
+          <div class="skill-card"><i class="fab fa-node"></i> Node.js</div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tools">
+        <div class="skills-grid">
+          <div class="skill-card"><i class="fab fa-git-alt"></i> GitHub</div>
+          <div class="skill-card"><i class="fab fa-figma"></i> Figma</div>
+        </div>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="fade">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Finance Dashboard</h3>
-          <p>A web app to track income & expenses with charts.</p>
-        </div>
-        <div class="project-card">
-          <h3>Social Media Trends Monitor</h3>
-          <p>System to analyze trending topics online.</p>
-        </div>
-        <div class="project-card">
-          <h3>Portfolio Website</h3>
-          <p>This site, hosted with GitHub Pages 🚀</p>
-        </div>
-      </div>
-    </section>
+    <section id="Projects" data-aos="fade-left">
+  <h2>Projects</h2>
+  <div class="projects-grid">
+    
+    <div class="project-card" data-aos="flip-left">
+      <img src="images/finnace.png" alt="Finance Dashboard" class="project-img"/>
+      <h3>Finance Dashboard</h3>
+      <p>A web app to track income & expenses with charts.</p>
+    </div>
+    
+    <div class="project-card" data-aos="flip-left" data-aos-delay="200">
+  <div class="project-images">
+    <img src="images/1.png" alt="Social Media Trends Monitor" class="project-img"/>
+    <img src="images/2.png" alt="Social Media Trends Monitor" class="project-img"/>
+  </div>
+  <h3>Social Media Trends Monitor</h3>
+  <p>System to analyze trending topics online.</p>
+</div>
 
-    <!-- Contact Section -->
-    <section id="contact" class="fade">
+    
+    
+    <div class="project-card" data-aos="flip-left" data-aos-delay="400">
+      <img src="images/3.jpg" alt="Prueksa" class="project-img"/>
+      <h3>Prueksa</h3>
+      <p>Prueksa: Mental Health Assessment App UI design prototype in Figma</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <section id="contact" data-aos="fade-up">
       <h2>Contact</h2>
       <div class="contact-links">
         <a href="mailto:kittithatchaichana@gmail.com"><i class="fas fa-envelope"></i> Email</a>
@@ -76,9 +105,25 @@
     </section>
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Starduztx | Built with ❤️ using HTML, CSS & FontAwesome</p>
+  <footer data-aos="fade-up">
+    <p>© 2025 Starduztx</p>
   </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const tabs = document.querySelectorAll('.tab-btn');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(btn => btn.classList.remove('active'));
+        contents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.tab).classList.add('active');
+      });
+    });
+  </script>
 </body>
 </html>
