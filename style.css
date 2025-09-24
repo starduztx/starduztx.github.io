@@ -58,7 +58,6 @@ header p {
   color: #333;
 }
 
-
 /* Nav */
 nav {
   display: flex;
@@ -90,7 +89,6 @@ nav a:hover {
   margin-left: 0.5rem;
   text-align: left;
 }
-
 
 /* Headings */
 h2 {
@@ -159,50 +157,70 @@ h2 {
 .projects-grid {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 40px; /* ระยะโปรเจคแต่ละอัน */
 }
 
 .project-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 14px;
-  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
   text-align: left;
   max-width: 700px;
 }
 
-.project-card img.project-img {
-  width: 100%;   /* กินเต็มกล่อง project-card */
-  max-width: 500px; /* กันไม่ให้ใหญ่เกินไป */
-  height: auto;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  box-shadow: 0px 6px 14px rgba(0,0,0,0.1);
-}
-
-
-.project-images {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 12px;
-}
-
 .project-card h3 {
-  margin: 8px 0;
+  margin: 8px 0 5px;
   font-size: 1.5rem;
   color: #004E7C;
+  font-weight: bold;
 }
 
 .project-card p {
   color: #555;
   font-size: 1rem;
+  margin-bottom: 20px;
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0px 12px 22px rgba(0,0,0,0.15);
+/* รูปโปรเจคเดี่ยว */
+.project-card img.project-img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  box-shadow: 0px 6px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.project-card img.project-img:hover {
+  transform: scale(1.02);
+}
+
+.project-images {
+  display: flex;
+  gap: 15px;              /* ระยะห่างระหว่างรูป */
+}
+
+.project-images img {
+  flex: 1;                
+  max-width: 100%;        
+  height: auto;           
+  border-radius: 12px;
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.12);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.02);
+}
+
+
+/* Container (About → Contact) */
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+  text-align: left;
 }
 
 /* Contact */
